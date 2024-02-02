@@ -11,6 +11,9 @@ dependencies:
   astro:
     specifier: ^4.3.0
     version: 4.3.0(typescript@5.3.3)
+  flowbite:
+    specifier: ^2.2.1
+    version: 2.2.1
   typescript:
     specifier: ^5.3.3
     version: 5.3.3
@@ -626,6 +629,10 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.0
+    dev: false
+
+  /@popperjs/core@2.11.8:
+    resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
     dev: false
 
   /@rollup/rollup-android-arm-eabi@4.9.6:
@@ -1596,6 +1603,13 @@ packages:
     engines: {node: '>=8'}
     dev: false
 
+  /flowbite@2.2.1:
+    resolution: {integrity: sha512-iiZyBTtriEDRHrqXZgpKHaxl4B2J8HZUP8Yn1RXozUDKszWHDVj4GxQqMMB9AJHRWOgXV/4E/LJZ/zqQgBUhWA==}
+    dependencies:
+      '@popperjs/core': 2.11.8
+      mini-svg-data-uri: 1.4.4
+    dev: false
+
   /fs-constants@1.0.0:
     resolution: {integrity: sha512-y6OAwoSIf7FyjMIv94u+b5rdheZEjzR63GTyZJm5qh4Bi+2YgwLCcI/fPFZkL5PSixOt6ZNKm+w+Hfp/Bciwow==}
     requiresBuild: true
@@ -2457,6 +2471,11 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /mini-svg-data-uri@1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
+    dev: false
 
   /minimist@1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
