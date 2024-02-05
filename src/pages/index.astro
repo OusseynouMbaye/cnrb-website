@@ -6,11 +6,20 @@ import Header from "../components/Header.astro";
 ---
 
 <Layout title="CNRB Website ">
-  <main>
+  <main class="">
     <Header />
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
+    <h1 class="text-4xl font-bold underline dark:text-white">Hello world!</h1>
     <h1>Welcome to <span class="text-gradient">Astro</span></h1>
+    <h2>texte de merde</h2>
     <button>allo</button>
+    <button
+      onclick="document.body.classList.toggle('dark')"
+      class="absolute w-16 h-16 bottom-8 right-16 bg-neutral-900 dark:bg-white
+      rounded-full text-white dark:text-black font-semibold"
+    >
+      DKR
+      <!-- {darkMode ? "🌞" : "🌚"} -->
+    </button>
   </main>
 </Layout>
 
