@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import logo from "./src/Images/logo.jpg";
+import logo from "./src/images/logo.jpg";
 ---
 
 <nav class="bg-white border-gray-200 dark:bg-gray-900 dark:border-gray-700">
@@ -9,8 +9,8 @@ import logo from "./src/Images/logo.jpg";
   >
     <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
       <!-- src="https://flowbite.com/docs/images/logo.svg" -->
-      <!-- <img src="./src/Images/logo.jpg" class="h-8" alt="CNRB Logo" /> -->
-      <Image src={logo} class="h-8" alt="Logo CNRB" />
+      <!-- <img src="./src/Images/logo.jpg"  class="h-8 w-14" alt="CNRB Logo" /> -->
+      <Image src={logo} width={55} height={55} alt="Logo CNRB" />
       <span
         class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
         >CNRB</span
@@ -121,7 +121,7 @@ import logo from "./src/Images/logo.jpg";
           <a
             href="#"
             class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-            >Pricing</a
+            >Competition</a
           >
         </li>
         <li>
