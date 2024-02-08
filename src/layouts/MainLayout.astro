@@ -1,11 +1,13 @@
 ---
 import Header from "../components/Header.astro";
-
+import Footer from "../components/Footer.astro";
+import ThemeToggle from "../components/ThemeToggle.tsx";
+import "../styles/global.css";
 interface Props {
   title: string;
 }
 
-const { title } = Astro.props;
+const { title = "Club de natation régional de Beauce" } = Astro.props;
 ---
 
 <!doctype html>
@@ -20,8 +22,11 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <!-- <Header /> -->
+    <Header />
+    <button id="themeButton">Changer de thème</button>
     <slot />
+    <!-- <ThemeToggle /> -->
+    <Footer />
     <script
       is:inline
       src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
@@ -29,7 +34,20 @@ const { title } = Astro.props;
   </body>
 </html>
 
-<script is:inline>
+<script>
+  const themeButton = document.getElementById("themeButton");
+  const currentTheme = localStorage.getItem("theme") ?? "light";
+
+  // Appliquer le thème actuel au chargement de la page
+  document.body.className = currentTheme;
+
+  themeButton?.addEventListener("click", () => {
+    const newTheme = document.body.className === "dark" ? "light" : "dark";
+    document.body.className = newTheme;
+    localStorage.setItem("theme", newTheme);
+  });
+</script>
+<!-- <script is:inline>
   const theme = (() => {
     if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
       return localStorage.getItem("theme");
@@ -46,7 +64,7 @@ const { title } = Astro.props;
     document.documentElement.classList.add("dark");
   }
   window.localStorage.setItem("theme", theme);
-</script>
+</script> -->
 
 <style is:global>
   /* :root {
@@ -59,10 +77,10 @@ const { title } = Astro.props;
 			rgb(var(--accent-light)) 30%,
 			white 60%
 		);
-	} */
+	} 
   html {
     font-family: system-ui, sans-serif;
-    /* background: #13151a; */
+    background: #13151a;
     background-size: 224px;
   }
   code {
@@ -75,5 +93,5 @@ const { title } = Astro.props;
       Bitstream Vera Sans Mono,
       Courier New,
       monospace;
-  }
+  }*/
 </style>
