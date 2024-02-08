@@ -71,6 +71,7 @@ body {
  * @cssprop {Color} color - The text color of the body in dark mode.
  */
 body.dark {
-  background-color: black;
+  background-color: rgb(17 24 39);
+  /* black; */
   color: white;
 }
