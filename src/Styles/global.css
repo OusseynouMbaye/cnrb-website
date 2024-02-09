@@ -61,7 +61,9 @@ h6 {
  */
 body {
   background-color: white;
-  color: black;
+  background-color: rgb(20, 27, 28);
+  /* color: black; */
+  color: white;
 }
 
 /**
@@ -70,8 +72,8 @@ body {
  * @cssprop {Color} background-color - The background color of the body in dark mode.
  * @cssprop {Color} color - The text color of the body in dark mode.
  */
-body.dark {
+/* body.dark {
   background-color: rgb(17 24 39);
-  /* black; */
+  black;
   color: white;
-}
+} */

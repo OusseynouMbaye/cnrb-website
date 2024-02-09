@@ -7,8 +7,9 @@ export default {
   theme: {
     extend: {
       colors: {
-        lightGreen: "rgba(150,194,94,1)",
+        Green: "rgb(166,211,102)", //"rgb(0,131,138)",
         darkBlue: "hsl(228,39%,23%)",
+        lightDark: "rgb(20,27,28)",
       },
     },
     screens: {
